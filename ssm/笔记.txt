@@ -1,0 +1,41 @@
+
+1、Spring和Mybatis进行整合
+ 1）相关jar包
+ 2）配置spring与mybatis的整合文件
+
+
+2、将SpringMVC整合进来
+	需要： spring-web,spring-mvc 
+	
+	
+	
+ SSM項目中，有两个容器：
+   Spring容器 - 父容器 ， 是使用ContextLoaderListener创建的， 
+             容器内可以存放的javaBean: com.softeem包下的（除了@Controller） ； 在配置文件中所配置的JavaBean
+   SpringMVC子容器：  使用 DispatcherServlet创建的，
+   	 子容器中存放的：  @Controller  ； 在配置文件中所配置的JavaBean
+   	 
+   
+   
+  在浏览器地址栏，输入url，向后台发送请求
+   创建controller【普通类】，替代Servlet，
+  
+  
+  
+ 处理方法可以接收的形参类型：  String , Integer 等包装类型 , int 等基本数据类型, HttpServletRequest ,。。。
+ 
+处理方法的返回值类型：
+	String  -> 逻辑视图名   , 当处理方法返回的是 逻辑视图名 的时候，必须得使用  视图解析器 来对这个逻辑视图名进行解析，形成 物理视图名  
+ 			-> 重定向
+ 			-> 请求转发
+    ModelAndView -> 即可包含数据，又可指定逻辑视图名
+ 			
+ 			
+模型数据： Model\ModelMap\Map  作为处理器方法的形参 
+
+	 
+springmvc对json数据的支持：
+	1）导入jackson的相关jar包
+	2）在springmvc的配置文件中，配置 注解驱动 
+	3）传输json数据
+
