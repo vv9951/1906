@@ -1,4 +1,6 @@
 
+git测试
+
 1、Spring和Mybatis进行整合
  1）相关jar包
  2）配置spring与mybatis的整合文件
